@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    This is my {{title}}!
+  </h1>
+</div>
+<h2>Here are some links to help you start: </h2>
+
+
+<div>
+<button md-button="onc" (click)="showList()"><i class="material-icons">menu</i></button>
+  <md-icon>home</md-icon>
+  <md-list *ngIf="show">
+    <md-list-item *ngFor="let menulist of MenuLists">{{ menulist }}</md-list-item>
+  </md-list>
+</div>
