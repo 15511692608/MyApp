@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  show: false;
+  show: boolean;
   title = '天下';
   MenuLists = ['one', 'two', 'Three'];
   showList() {
@@ -15,5 +15,8 @@ export class AppComponent {
     } else {
       this.show = true;
     }
+  }
+  ngOninit() {
+    this.show = false;
   }
 }
