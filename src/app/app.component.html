@@ -1,48 +1,41 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
   <h1>
     This is my {{title}}!
   </h1>
 </div>
 
-<md-sidenav #sidenav class="example-sidenav-fab-container" >
-  <div>
-  <button md-button="onc" (click)="showList()"><i class="material-icons">menu</i></button>
-  <md-list *ngIf="show">
-    <md-list-item *ngFor="let menulist of MenuLists">{{ menulist }}</md-list-item>
-  </md-list>
-  </div>
-</md-sidenav>
-<md-sidenav-container class="example-container">
-
+<md-sidenav-container>
 </md-sidenav-container>
 
-<md-grid-list cols="4"  rowHeight="50px"(click)="sidenav.close()">
-  <md-grid-tile colspan="4" rowspan="1" >
-    <h2>Here are some links to help you start: </h2>
-  </md-grid-tile>
-  <md-grid-tile>
+
+
+<md-sidenav #sidenav  >
+  <div>
+    <button md-button="onc" (click)="showList()"><i class="material-icons">menu</i></button>
+    <md-list *ngIf="show">
+      <md-list-item *ngFor="let menulist of MenuLists">{{ menulist }}</md-list-item>
+    </md-list>
+  </div>
+</md-sidenav>
+
+<div  fxLayout="row wrap" fxLayoutAlign="center" >
+  <div fxFlex="grow"><h2>Here are some links to help you start: </h2></div>
+  <div fxFlex="33">
     <div class="example-scrolling-content">
       <button type="button" md-button (click)="sidenav.toggle()">
         <md-icon>home</md-icon>
       </button>
     </div>
+  </div>
+  <div fxFlex="33">
 
-  </md-grid-tile>
-  <md-grid-tile >
     <md-tab-group>
       <md-tab label="123">214214</md-tab>
       <md-tab label="465">124124</md-tab>
 
     </md-tab-group>
-  </md-grid-tile>
 
-  <md-grid-tile>
-4
-  </md-grid-tile>
-
-</md-grid-list>
-<div>
-
-
+  </div>
 </div>
